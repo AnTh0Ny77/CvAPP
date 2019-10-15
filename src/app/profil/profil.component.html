@@ -1,0 +1,42 @@
+
+<div fxLayout="row" fxLayoutGap="3%" fxLayoutAlign.sm="center" fxLayoutAlign.xs="center">
+    <div fxFlex="25%" fxFlex.xs="80%" fxFlex.sm="70%" fxLayout="column" fxLayoutGap="3%">
+        <mat-card fxLayout="column" fxLayoutAlign="center center">
+                <img class="profil" mat-card-md-image src="../../assets/profil2.png">  
+                <h3>Anthony Bizien</h3>
+                <p>Full-Stack<br>Developer</p>
+                <button mat-button [matMenuTriggerFor]="menu" class="btn">My Skills</button>
+                    <mat-menu #menu="matMenu">
+                    <button mat-menu-item>Front-end Skills</button>
+                    <button mat-menu-item>Back-End Skills</button>
+                    </mat-menu>
+                <button mat-button class="btn2">Timeline</button>
+        </mat-card>
+        <mat-card>
+            <div fxLayout="row" fxLayoutGap="40%">
+                <div>
+                    <h3>Contacts</h3>
+                </div>
+                <div fxLayout="row" fxLayoutGap="25%" fxLayoutAlign="end center">
+                    <a href="#"  class="btnlink"><i class="fa fa-facebook  "></i></a>
+                    <a href="#"  class="btnlink"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"  class="btnlink"><i class="fa fa-github-alt"></i></a> 
+                </div>
+            </div>
+            <mat-card fxLayout="column" fxLayoutAlign="center center">
+                <button mat-button fxFlex="80%" class="btnmessage" (click)="openModal()">
+                       Send me a message <i class="fa fa-envelope"></i>
+                </button>
+            </mat-card>
+        </mat-card>
+    </div>
+    <div fxFlex="70%"  fxHide.xs fxHide.sm >
+        <mat-card fxLayout="row" fxLayoutAlign="center center"  >
+                    <img  mat-card-image src="../../assets/cover.png" fxFlex="95%" class="cover" alt="coverPic">
+        </mat-card>
+    </div>  
+</div>
+
+
+
+
