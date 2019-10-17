@@ -1,5 +1,5 @@
 
-<div fxLayout="row" fxLayoutGap="3%" fxLayoutAlign.sm="center" fxLayoutAlign.xs="center">
+<div fxLayout="row" fxLayout.sm='column' fxLayout.xs='column' fxLayoutGap="3%" fxLayoutAlign.sm="center" fxLayoutAlign.xs="center">
     <div fxFlex="25%" fxFlex.xs="80%" fxFlex.sm="70%" fxLayout="column" fxLayoutGap="3%">
         <mat-card fxLayout="column" fxLayoutAlign="center center">
                 <img class="profil" mat-card-md-image src="../../assets/profil2.png">  
@@ -7,10 +7,10 @@
                 <p>Full-Stack<br>Developer</p>
                 <button mat-button [matMenuTriggerFor]="menu" class="btn">My Skills</button>
                     <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Front-end Skills</button>
-                    <button mat-menu-item>Back-End Skills</button>
+                    <button mat-menu-item routerLink="/front">Front-end Skills</button>
+                    <button mat-menu-item routerLink='/back'>Back-End Skills</button>
                     </mat-menu>
-                <button mat-button class="btn2">Timeline</button>
+                <button mat-button class="btn2" routerLink='timeline'>Timeline</button>
         </mat-card>
         <mat-card>
             <div fxLayout="row" fxLayoutGap="40%">
@@ -30,11 +30,13 @@
             </mat-card>
         </mat-card>
     </div>
-    <div fxFlex="70%"  fxHide.xs fxHide.sm >
-        <mat-card fxLayout="row" fxLayoutAlign="center center"  >
+    <div fxFlex="70%" >
+        <mat-card fxLayout="row" fxLayoutAlign="center center" fxHide.xs fxHide.sm >
                     <img  mat-card-image src="../../assets/cover.png" fxFlex="95%" class="cover" alt="coverPic">
         </mat-card>
+        <router-outlet></router-outlet>
     </div>  
+    
 </div>
 
 

@@ -1,1 +1,18 @@
-<p>modal works!</p>
+<form fxLayout="column" (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <mat-dialog-content>
+    <div>
+      <mat-form-field>
+        <input matInput  placeholder="Enter your email" id="email" name="email" ngModel email required>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+            <textarea matInput placeholder="Enter your message" id="text" name="text" ngModel required  minlength="10" maxlength="255"></textarea>
+      </mat-form-field>
+    </div>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button mat-button type="button" mat-dialog-close>Cancel</button>
+      <button mat-button type="submit" class="btnlink" matDialogClose [disabled]="f.invalid">Send</button>
+    </mat-dialog-actions>
+</form>
