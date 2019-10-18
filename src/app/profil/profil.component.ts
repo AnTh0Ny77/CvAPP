@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material';
 import {ModalComponent} from '../modal/modal.component'
-
+import { SendstatusService } from "../services/sendstatus.service";
 
 
 @Component({
@@ -11,8 +11,9 @@ import {ModalComponent} from '../modal/modal.component'
 })
 export class ProfilComponent implements OnInit {
   modalDialogRef: MatDialogRef<ModalComponent>;
-  constructor(private dialog: MatDialog) { }
-
+  send: boolean;
+  constructor(private dialog: MatDialog, private status : SendstatusService) { }
+  
   ngOnInit() {
   }
   openModal(){

@@ -4,6 +4,17 @@
 
 export const environment = {
   production: false
+  
+};
+export const firebaseConfig = {
+  apiKey: "AIzaSyAWEWUW3ddGmWoER_TmEvvTa0gLxXgS7Y8",
+  authDomain: "appcv-76f02.firebaseapp.com",
+  databaseURL: "https://appcv-76f02.firebaseio.com",
+  projectId: "appcv-76f02",
+  storageBucket: "appcv-76f02.appspot.com",
+  messagingSenderId: "928832629037",
+  appId: "1:928832629037:web:5d0e700ca78ffe6e1f0ba4",
+  measurementId: "G-28QD079QKC"
 };
 
 /*

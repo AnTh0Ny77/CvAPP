@@ -14,6 +14,10 @@ import { TimelineComponent } from './timeline/timeline.component';
 import { Error404Component } from './error404/error404.component';
 import { FrontComponent } from './front/front.component';
 import { BackComponent } from './back/back.component';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import {firebaseConfig} from 'src/environments/environment'
 
 @NgModule({
   declarations: [
@@ -25,11 +29,15 @@ import { BackComponent } from './back/back.component';
     FrontComponent,
     BackComponent
   ],
+  
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
     MatDialogModule,
+    AngularFirestoreModule,
     MatMenuModule,
     MatCardModule,
     MatIconModule,
@@ -44,4 +52,6 @@ import { BackComponent } from './back/back.component';
   bootstrap: [AppComponent],
   entryComponents: [ModalComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}

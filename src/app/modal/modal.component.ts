@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm} from '@angular/forms';
-
-
+import { AngularFirestore } from '@angular/fire/firestore';
+import { SendstatusService } from "../services/sendstatus.service";
 
 @Component({
   selector: 'app-modal',
@@ -9,11 +9,21 @@ import { NgForm} from '@angular/forms';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
-  constructor() { }
+  constructor( private firestore: AngularFirestore, private status: SendstatusService ) { }
   ngOnInit() {
   }
+  postdata(data){
+    return this.firestore.collection('messages').add(data)
+  }
+  
   onSubmit(form: NgForm) {
-    console.log(form.value);
+    this.postdata(form.value)
+    .then(resp => {
+      this.status.changeStatus();
+      ;})
+      .catch(error => {
+        console.log(error);
+      });
 }
 
   
