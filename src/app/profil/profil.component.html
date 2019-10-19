@@ -18,15 +18,20 @@
                     <h3>Contacts</h3>
                 </div>
                 <div fxLayout="row" fxLayoutGap="25%" fxLayoutAlign="end center">
-                    <a href="#"  class="btnlink"><i class="fa fa-facebook  "></i></a>
+                    <a class="btnlink"><i class="fa fa-facebook  "></i></a>
                     <a href="#"  class="btnlink"><i class="fa fa-linkedin"></i></a>
                     <a href="#"  class="btnlink"><i class="fa fa-github-alt"></i></a> 
                 </div>
             </div>
             <mat-card fxLayout="column" fxLayoutAlign="center center">
-                <button mat-button fxFlex="80%" class="btnmessage" (click)="openModal()">
+                <button *ngIf="!stats; else elseBlock" mat-button fxFlex="80%" class="btnmessage" (click)="openModal()">
                        Send me a message <i class="fa fa-envelope"></i>
                 </button>
+                <ng-template #elseBlock>
+                    <button  mat-button fxFlex="80%" class="btnmessage2">
+                        Thank You ! <i class="fa fa-thumbs-up"></i>
+                 </button>
+                </ng-template>
             </mat-card>
         </mat-card>
     </div>

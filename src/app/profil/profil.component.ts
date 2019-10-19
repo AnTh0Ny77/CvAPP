@@ -11,13 +11,17 @@ import { SendstatusService } from "../services/sendstatus.service";
 })
 export class ProfilComponent implements OnInit {
   modalDialogRef: MatDialogRef<ModalComponent>;
-  send: boolean;
+
   constructor(private dialog: MatDialog, private status : SendstatusService) { }
-  
+  stats: boolean;
   ngOnInit() {
+    this.status.currentStatus.subscribe(status => this.stats = status );
   }
   openModal(){
     this.modalDialogRef = this.dialog.open(ModalComponent);
+  }
+  test(){
+    console.log(this.stats);
   }
   
 }
