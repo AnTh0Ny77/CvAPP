@@ -1,9 +1,9 @@
 
 <div fxLayout="row" fxLayout.sm='column' fxLayout.xs='column' fxLayoutGap="3%" fxLayoutAlign.sm="center" fxLayoutAlign.xs="center">
-    <div fxFlex="25%" fxFlex.xs="80%" fxFlex.sm="70%" fxLayout="column" fxLayoutGap="3%">
+    <div *ngFor="let order of array" fxFlex="25%" fxFlex.xs="80%" fxFlex.sm="70%" fxLayout="column" fxLayoutGap="3%">
         <mat-card fxLayout="column" fxLayoutAlign="center center">
-                <img class="profil" mat-card-md-image src="../../assets/profil2.png">  
-                <h3>Anthony Bizien</h3>
+                <img class="profil" mat-card-md-image src='../../assets/{{order.Profil}}'>  
+                <h3 >{{order.Name}}</h3>
                 <p>Full-Stack<br>Developer</p>
                 <button mat-button [matMenuTriggerFor]="menu" class="btn">My Skills</button>
                     <mat-menu #menu="matMenu">
@@ -18,9 +18,9 @@
                     <h3>Contacts</h3>
                 </div>
                 <div fxLayout="row" fxLayoutGap="25%" fxLayoutAlign="end center">
-                    <a class="btnlink"><i class="fa fa-facebook  "></i></a>
-                    <a href="#"  class="btnlink"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"  class="btnlink"><i class="fa fa-github-alt"></i></a> 
+                    <a href="{{order.Fb}}" target="_blank" class="btnlink"><i class="fa fa-facebook  "></i></a>
+                    <a href="{{order.lk}}" target="_blank" class="btnlink"><i class="fa fa-linkedin"></i></a>
+                    <a href="{{order.Github}}" target="_blank"  class="btnlink"><i class="fa fa-github-alt"></i></a> 
                 </div>
             </div>
             <mat-card fxLayout="column" fxLayoutAlign="center center">
@@ -36,8 +36,8 @@
         </mat-card>
     </div>
     <div fxFlex="70%" >
-        <mat-card fxLayout="row" fxLayoutAlign="center center" fxHide.xs fxHide.sm >
-                    <img  mat-card-image src="../../assets/cover.png" fxFlex="95%" class="cover" alt="coverPic">
+        <mat-card *ngFor="let order2 of array" fxLayout="row" fxLayoutAlign="center center" fxHide.xs fxHide.sm >
+                    <img  mat-card-image src="../../assets/{{order2.Cover}}" fxFlex="95%" class="cover" alt="coverPic">
         </mat-card>
         <router-outlet></router-outlet>
     </div>  
