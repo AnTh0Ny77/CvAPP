@@ -24,7 +24,6 @@ array: any;
         };
         
       }) 
-      console.log(this.array);
     }); 
   }
 
