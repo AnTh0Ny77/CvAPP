@@ -4,7 +4,7 @@ import { AngularFirestore } from "@angular/fire/firestore";
   providedIn: 'root'
 })
 export class DynaProfilService {
-  profil: any;
+  
   constructor(private FireStore: AngularFirestore) { 
   }
   getProfile() { 

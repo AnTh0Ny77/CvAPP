@@ -18,6 +18,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import {firebaseConfig} from 'src/environments/environment'
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import {firebaseConfig} from 'src/environments/environment'
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     MatDialogModule,
+    MatExpansionModule,
     AngularFirestoreModule,
     MatMenuModule,
     MatCardModule,

@@ -1,1 +1,16 @@
-<p>front works!</p>
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let order of array">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{order.Title}}
+        </mat-panel-title>
+        <mat-panel-description fxHide.xs fxHide.sm>
+          {{order.Subtitle}}
+        </mat-panel-description>
+        <img mat-card-avatar src="{{order.Pic}}">
+      </mat-expansion-panel-header>
+      <h5 fxHide.md fxHide.lg fxHide.xl> {{order.Subtitle}}</h5>
+      <p>{{order.Text}}</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+  
