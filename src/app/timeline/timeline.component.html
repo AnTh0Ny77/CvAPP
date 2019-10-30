@@ -18,7 +18,7 @@
             <a *ngIf="order.Href" href="{{order.Href}}" target="_blank" >{{order.Href}}</a>
             </div>
             <div >
-            <img *ngIf="order.Pic" fxFlex.xl="30%" fxFlex.lg="35%" fxFlex="35%" fxFlex.sm="40%" fxFlex.xs="100%" mat-card-image src="{{order.Pic}}">
+            <img *ngIf="order.Pic" fxFlex.xl="30%" fxFlex.lg="35%" fxFlex="35%" fxFlex.sm="40%" fxHide.xs mat-card-image src="{{order.Pic}}">
             </div>
         </mat-card-content>
     </mat-card>
