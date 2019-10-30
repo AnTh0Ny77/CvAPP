@@ -17,7 +17,7 @@ import { BackComponent } from './back/back.component';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
-import {firebaseConfig} from 'src/environments/environment'
+
 import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
@@ -35,7 +35,16 @@ import {MatExpansionModule} from '@angular/material/expansion';
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp( {
+      apiKey: "AIzaSyAWEWUW3ddGmWoER_TmEvvTa0gLxXgS7Y8",
+      authDomain: "appcv-76f02.firebaseapp.com",
+      databaseURL: "https://appcv-76f02.firebaseio.com",
+      projectId: "appcv-76f02",
+      storageBucket: "appcv-76f02.appspot.com",
+      messagingSenderId: "928832629037",
+      appId: "1:928832629037:web:5d0e700ca78ffe6e1f0ba4",
+      measurementId: "G-28QD079QKC"
+    }),
     AngularFireDatabaseModule,
     MatDialogModule,
     MatExpansionModule,
@@ -54,6 +63,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
   bootstrap: [AppComponent],
   entryComponents: [ModalComponent]
 })
+
 export class AppModule { 
   
 }
