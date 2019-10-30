@@ -2,7 +2,7 @@
 <div fxLayout="row" fxLayout.sm='column' fxLayout.xs='column' fxLayoutGap="3%" fxLayoutAlign.sm="center" fxLayoutAlign.xs="center">
     <div *ngFor="let order of array" fxFlex="25%" fxFlex.xs="80%" fxFlex.sm="70%" fxLayout="column" fxLayoutGap="3%">
         <mat-card fxLayout="column" fxLayoutAlign="center center">
-                <img class="profil" mat-card-md-image src='../../assets/{{order.Profil}}'>  
+                <img class="profil" mat-card-md-image src='assets/{{order.Profil}}'>  
                 <h3 >{{order.Name}}</h3>
                 <p>Full-Stack<br>Developer</p>
                 <button mat-button [matMenuTriggerFor]="menu" class="btn">My Skills</button>
@@ -17,7 +17,7 @@
                 <div>
                     <h3>Contacts</h3>
                 </div>
-                <div fxLayout="row" fxLayoutGap="25%" fxLayoutAlign="end center">
+                <div fxHide.xs fxHide.sm fxLayout="row" fxLayoutGap="25%" fxLayoutAlign="end center">
                     <a href="{{order.Fb}}" target="_blank" class="btnlink"><i class="fa fa-facebook  "></i></a>
                     <a href="{{order.lk}}" target="_blank" class="btnlink"><i class="fa fa-linkedin"></i></a>
                     <a href="{{order.Github}}" target="_blank"  class="btnlink"><i class="fa fa-github-alt"></i></a> 
@@ -37,7 +37,7 @@
     </div>
     <div fxFlex="70%" fxLayoutGap="3%" >
         <mat-card *ngFor="let order2 of array" fxLayout="row" fxLayoutAlign="center center" fxHide.xs fxHide.sm  >
-                    <img  mat-card-image src="../../assets/{{order2.Cover}}" fxFlex="95%" fxFlex.xl="85%" class="cover" alt="coverPic">
+                    <img  mat-card-image src="assets/{{order2.Cover}}" fxFlex="95%" fxFlex.xl="85%" class="cover" alt="coverPic">
         </mat-card>
         
         <router-outlet ></router-outlet>
