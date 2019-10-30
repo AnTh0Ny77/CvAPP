@@ -35,11 +35,13 @@
             </mat-card>
         </mat-card>
     </div>
-    <div fxFlex="70%" >
-        <mat-card *ngFor="let order2 of array" fxLayout="row" fxLayoutAlign="center center" fxHide.xs fxHide.sm >
-                    <img  mat-card-image src="../../assets/{{order2.Cover}}" fxFlex="95%" class="cover" alt="coverPic">
+    <div fxFlex="70%" fxLayoutGap="3%" >
+        <mat-card *ngFor="let order2 of array" fxLayout="row" fxLayoutAlign="center center" fxHide.xs fxHide.sm  >
+                    <img  mat-card-image src="../../assets/{{order2.Cover}}" fxFlex="95%" fxFlex.xl="85%" class="cover" alt="coverPic">
         </mat-card>
-        <router-outlet></router-outlet>
+        
+        <router-outlet ></router-outlet>
+    
     </div>  
     
 </div>
