@@ -122,8 +122,13 @@
               "devServerTarget": "AppCv:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "AppCv"
 }
